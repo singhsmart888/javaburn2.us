@@ -64,3 +64,4 @@ Required GitHub secrets:
 - `/ingredients`, `/benefits`, `/reviews`, `/about-us`, `/contact-us`
 - `/privacy-policy`, `/terms-conditions`, `/refund-policy`, `/order-tracking`
 - `/order` — Affiliate redirect (noindex)
+
