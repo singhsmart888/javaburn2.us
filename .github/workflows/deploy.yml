@@ -80,6 +80,6 @@ jobs:
       - name: Deploy to Cloudflare Pages
         run: npx wrangler@latest pages deploy dist --project-name=${{ secrets.CF_PROJECT_NAME }} --branch=main
         env:
-          CLOUDFLARE_API_KEY: ${{ secrets.CF_GLOBAL_KEY }}
+          CLOUDFLARE_GLOBAL_KEY: ${{ secrets.CF_GLOBAL_KEY }}
           CLOUDFLARE_EMAIL: ${{ secrets.CF_EMAIL }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
