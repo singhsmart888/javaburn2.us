@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Pages
+name: Deploy
 
 on:
   push:
@@ -6,30 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build Astro site
-        run: npm run build
-
-      - name: Deploy to Cloudflare Pages
-        run: npx wrangler@latest pages deploy dist --project-name=${{ secrets.CF_PROJECT_NAME }} --branch=main
-        env:
-          CLOUDFLARE_GLOBAL_KEY: ${{ secrets.CF_GLOBAL_KEY }}
-          CLOUDFLARE_EMAIL: ${{ secrets.CF_EMAIL }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      - run: echo "Test"
