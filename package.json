@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node -e \"import('fs').then(fs=>{const d='dist';if(fs.existsSync(d+'/sitemap-0.xml'))fs.copyFileSync(d+'/sitemap-0.xml',d+'/sitemap.xml');});\"",
+    "postbuild": "node -e \"import('fs').then(fs=>{const d='dist'; if(fs.existsSync(d+'/sitemap-0.xml')){ fs.copyFileSync(d+'/sitemap-0.xml',d+'/sitemap.xml'); fs.unlinkSync(d+'/sitemap-0.xml'); fs.unlinkSync(d+'/sitemap-index.xml'); } });\"",
     "preview": "astro preview",
     "astro": "astro"
   },
