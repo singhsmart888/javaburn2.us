@@ -1,0 +1,2797 @@
+:root {
+  --jb-primary: #111111;
+  --jb-primary-strong: #e65100;
+  --jb-button: #f57c00;
+  --jb-button-hover: #e65100;
+  --jb-accent: #f57c00;
+  --jb-accent-strong: #e65100;
+  --jb-dark: #0a0a0a;
+  --jb-dark-soft: #1a1209;
+  --jb-light: #1a1a1a;
+  --jb-surface: #ffffff;
+  --jb-heading: #ffffff;
+  --jb-text: #d4d4d4;
+  --jb-text-dark: #d9def3;
+  --jb-border: #333333;
+  --jb-shadow: 18, 8, 82;
+  --jb-gold: #d7b66d;
+}
+
+::selection {
+  background: rgba(245, 124, 0, 0.55);
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--jb-dark);
+  overscroll-behavior-y: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #0f0f0f 0%, #1c1c1c 100%);
+  color: var(--jb-text);
+  overscroll-behavior-y: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "dlig" 0, "calt" 0;
+  letter-spacing: 0.02em;
+}
+
+#main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  background: transparent;
+}
+
+a {
+  color: var(--jb-button);
+}
+
+a:hover,
+a:focus {
+  color: var(--jb-primary-strong);
+}
+
+.text-primary,
+.text-primary:hover,
+.text-primary:focus,
+a.text-primary,
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #1a1a1a !important;
+}
+
+.text-success,
+.text-success:hover,
+.text-success:focus,
+.text-info,
+.text-info:hover,
+.text-info:focus {
+  color: #1a1a1a !important;
+}
+
+.text-warning,
+a.text-warning,
+a.text-warning:hover,
+a.text-warning:focus {
+  color: var(--jb-gold) !important;
+}
+
+.menu.trimology-menu-section,
+section.menu.trimology-menu-section {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  backdrop-filter: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.trimology-menu-section .trimology-navbar,
+.trimology-menu-section .trimology-navbar.opened,
+.trimology-menu-section .trimology-navbar.collapsed,
+.trimology-menu-section .trimology-navbar.trimology-navbar-short,
+.trimology-menu-section .trimology-navbar.trimology-navbar-expand-lg,
+.trimology-menu-section .dropdown-menu {
+  background: linear-gradient(90deg, rgba(18, 8, 82, 0.98) 0%, rgba(27, 13, 118, 0.96) 58%, rgba(55, 49, 184, 0.94) 100%) !important;
+}
+
+.trimology-navbar {
+  background: linear-gradient(90deg, rgba(18, 8, 82, 0.98) 0%, rgba(27, 13, 118, 0.96) 58%, rgba(55, 49, 184, 0.94) 100%) !important;
+  border-bottom: 1px solid rgba(216, 220, 239, 0.14);
+  box-shadow: 0 10px 24px rgba(18, 8, 82, 0.24);
+  min-height: 0 !important;
+}
+
+.trimology-menu-section .trimology-navbar.trimology-navbar-fixed-top,
+.trimology-menu-section .trimology-navbar.trimology-navbar-dropdown,
+nav.trimology-navbar.trimology-navbar-fixed-top,
+nav.trimology-navbar.trimology-navbar-dropdown {
+  position: fixed !important;
+  inset: 0 0 auto 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  transform: none !important;
+  z-index: 1030 !important;
+}
+
+html {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body {
+  margin-top: 0 !important;
+  padding-top: 76px !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 64px !important;
+  }
+}
+
+.trimology-caption,
+.trimology-caption:hover,
+.trimology-caption:focus {
+  color: #ffffff !important;
+  letter-spacing: 0.04em;
+}
+
+.trimology-navbar .nav-link {
+  color: rgba(235, 240, 255, 0.82) !important;
+}
+
+.trimology-navbar .nav-link:hover,
+.trimology-navbar .nav-link:focus,
+.trimology-navbar .nav-link.active {
+  color: #ffffff !important;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  nav.trimology-navbar.trimology-navbar-fixed-top,
+  nav.trimology-navbar.trimology-navbar-dropdown {
+    min-height: 64px !important;
+  }
+
+  .trimology-navbar .trimology-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    max-width: 100% !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .trimology-navbar-brand {
+    flex: 0 0 auto !important;
+    margin-right: 16px !important;
+  }
+
+  .trimology-caption {
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+  .trimology-navbar-toggler {
+    display: none !important;
+  }
+
+  .trimology-navbar-collapse {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-basis: auto !important;
+    flex-grow: 1 !important;
+    width: auto !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .trimology-navbar-nav {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    width: auto !important;
+    gap: 8px !important;
+    margin-left: auto !important;
+    margin-right: 12px !important;
+  }
+
+  .trimology-navbar .nav-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 8px 6px !important;
+    border-radius: 8px !important;
+    font-size: 0.86rem !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  .trimology-navbar .nav-link:hover,
+  .trimology-navbar .nav-link:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .trimology-navbar-buttons {
+    flex: 0 0 auto !important;
+    margin-top: 0 !important;
+  }
+
+  .trimology-navbar-buttons .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    padding: 9px 13px !important;
+    font-size: 0.84rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+.trimology-hamburger span {
+  background: #ffffff !important;
+}
+
+.btn-warning,
+.btn-warning:active,
+.btn-warning.focus,
+.btn-warning.active,
+.trimology-hero-btn-primary,
+.reviews-cta-button,
+.btn-advantages-cta,
+.btn-sticky-cta {
+  background: linear-gradient(135deg, var(--jb-button) 0%, var(--jb-accent-strong) 100%) !important;
+  border-color: var(--jb-button) !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 30px rgba(49, 180, 134, 0.28) !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.trimology-hero-btn-primary:hover,
+.trimology-hero-btn-primary:focus,
+.reviews-cta-button:hover,
+.reviews-cta-button:focus,
+.btn-advantages-cta:hover,
+.btn-advantages-cta:focus,
+.btn-sticky-cta:hover,
+.btn-sticky-cta:focus {
+  background: linear-gradient(135deg, var(--jb-button-hover) 0%, #17794f 100%) !important;
+  border-color: var(--jb-button-hover) !important;
+  color: #ffffff !important;
+}
+
+.trimology-hero-section,
+.trimology-special-deal-section,
+.reviews-cta-content,
+.trimology-footer-section,
+.sticky-footer-cta,
+.trimology-quick-links-section {
+  background: linear-gradient(180deg, var(--jb-dark) 0%, var(--jb-dark-soft) 100%) !important;
+}
+
+.trimology-choose-title,
+.trimology-what-is-section,
+.trimology-benefits-section,
+.trimology-reviews-section,
+.trimology-special-deal-section {
+  background: linear-gradient(180deg, #111111 0%, #0d0734 100%) !important;
+}
+
+.trimology-hero-gradient,
+.reviews-cta-content::before {
+  background: radial-gradient(circle, rgba(75, 70, 229, 0.22) 0, transparent 68%) !important;
+}
+
+.trimology-hero-pattern {
+  background-image: radial-gradient(circle at 20% 30%, rgba(49, 180, 134, 0.08) 0, transparent 48%), radial-gradient(circle at 80% 70%, rgba(75, 70, 229, 0.1) 0, transparent 52%) !important;
+}
+
+.trimology-hero-badge,
+.reviews-badge,
+#alphacur-bonuses .trimology-text-wrap > span.trimology-fonts-style,
+.best-value-ribbon {
+  background: linear-gradient(135deg, var(--jb-accent) 0%, var(--jb-accent-strong) 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(49, 180, 134, 0.24) !important;
+}
+
+.trimology-hero-badge,
+.trimology-hero-badge span,
+.trimology-hero-badge svg {
+  color: #ffffff !important;
+}
+
+.trimology-hero-badge .badge-icon {
+  color: var(--jb-gold) !important;
+}
+
+.trimology-hero-badge,
+.reviews-badge {
+  border: 1px solid rgba(49, 180, 134, 0.28);
+}
+
+.trimology-hero-title-main,
+.trimology-hero-title-sub,
+.trimology-hero-description,
+.trimology-hero-feature-item,
+.trimology-hero-trust-indicators,
+.reviews-cta-title,
+.reviews-cta-text,
+.pricing-main-title,
+.pricing-subtitle,
+.quick-links-title,
+.sticky-cta-title,
+.sticky-cta-subtitle,
+.quick-links-list li a,
+.footer-link,
+.footer-copyright p,
+.trimology-special-deal-section .trimology-section-title {
+  color: #ffffff !important;
+}
+
+.trimology-hero-description,
+.trimology-hero-feature-item,
+.quick-links-list li a,
+.sticky-cta-subtitle,
+.footer-copyright p,
+.disclaimer-text strong {
+  color: rgba(232, 236, 252, 0.92) !important;
+}
+
+.card-value,
+.title-highlight,
+.price-amount,
+.discounted-total,
+.bonus-info,
+.shipping-info,
+.trimology-section-subtitle strong,
+#alphacur-bonuses .trimology-text strong,
+.verified-badge,
+.quick-links-list li a:hover,
+.quick-links-list li a:focus {
+  color: var(--jb-accent) !important;
+}
+
+/* Section backgrounds - alternating dark/light for visual rhythm */
+.trimology-reviews-section {
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%) !important;
+}
+
+.trimology-pricing-section {
+  background: linear-gradient(180deg, #fff8e1 0%, #ffe0b2 30%, #1a1a1a 100%) !important;
+}
+
+.trimology-what-is-section {
+  background: #ffffff !important;
+}
+
+.trimology-works-section {
+  background: #f5f5f5 !important;
+}
+
+.trimology-advantages-section {
+  background: #ffffff !important;
+}
+
+.trimology-ingredients-section {
+  background: #f5f5f5 !important;
+}
+
+.trimology-proven-section {
+  background: #ffffff !important;
+}
+
+.trimology-benefits-section {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%) !important;
+}
+
+.trimology-moneyback-guarantee-section {
+  background: #fafafa !important;
+}
+
+.trimology-faqs-section {
+  background: #ffffff !important;
+}
+
+.trimology-special-deal-section {
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%) !important;
+}
+
+.trimology-quick-links-section {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%) !important;
+}
+
+.trimology-deal-content-one {
+  background: transparent !important;
+}
+
+.trimology-section-title,
+.advantages-title,
+.pricing-main-title,
+.trimology-faqs-section h3,
+.trimology-faq-title-edit,
+.review-title,
+.customer-name,
+.package-quantity,
+.badge-title,
+.quick-links-title,
+.sticky-cta-title,
+.trimology-moneyback-guarantee-section .trimology-section-title,
+.trimology-section h1,
+.trimology-section h2,
+.trimology-section h3,
+.trimology-section h4 {
+  color: var(--jb-heading) !important;
+}
+
+.trimology-choose-title .trimology-section-title,
+.trimology-what-is-section .trimology-section-title,
+.trimology-benefits-section .trimology-section-title,
+.trimology-reviews-section .trimology-section-title,
+.trimology-special-deal-section .trimology-section-title,
+.pricing-header .pricing-main-title,
+.pricing-header .pricing-subtitle,
+.reviews-cta-title,
+.reviews-cta-text,
+.quick-links-title,
+.quick-links-list li a,
+.sticky-cta-title,
+.sticky-cta-subtitle {
+  color: #ffffff !important;
+}
+
+#alphacur-bonuses .trimology-section-title,
+.trimology-works-section .trimology-section-title,
+.trimology-ingredients-section .trimology-section-title,
+.trimology-moneyback-guarantee-section .trimology-section-title,
+.trimology-faqs-section .trimology-section-title,
+.trimology-subheadings,
+.item-title {
+  color: var(--jb-heading) !important;
+}
+
+.trimology-container.trimology-choose-title > .row > .title .trimology-section-title,
+.trimology-container.trimology-what-is-section > .row > .title .trimology-section-title,
+.trimology-container.trimology-benefits-section > .row > .title .trimology-section-title,
+.trimology-container.trimology-special-deal-section > .row > .title .trimology-section-title,
+.trimology-reviews-section .trimology-container > .row > .title .trimology-section-title {
+  color: #ffffff !important;
+}
+
+.trimology-text,
+.trimology-section-subtitle,
+.advantages-intro,
+.advantage-text,
+.review-text,
+.customer-location,
+.badge-subtitle,
+.price-label,
+.price-original,
+.original-total,
+.trimology-faq-text,
+.trimology-section li,
+.trimology-section ol,
+.trimology-section ul,
+.trimology-section p {
+  color: var(--jb-text) !important;
+}
+
+.trimology-special-deal-section .trimology-section-title {
+  color: #ffffff !important;
+}
+
+.trimology-reviews-title {
+  color: var(--jb-heading) !important;
+}
+
+.trimology-reviews-subtitle {
+  color: var(--jb-text) !important;
+}
+
+.trimology-faqs-section {
+  background: linear-gradient(180deg, #111111 0%, #eef3ff 100%) !important;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.trimology-faqs-section .card {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(216, 220, 239, 0.92) !important;
+  border-radius: 22px !important;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(var(--jb-shadow), 0.08) !important;
+}
+
+.trimology-faqs-section .card-header {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.trimology-faqs-section .trimology-faq-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+.trimology-faqs-section .trimology-faq-title:hover,
+.trimology-faqs-section .trimology-faq-title:focus {
+  background: rgba(75, 70, 229, 0.04) !important;
+}
+
+.trimology-faqs-section .trimology-faq-title-edit,
+.trimology-faqs-section h3 {
+  color: var(--jb-heading) !important;
+}
+
+.trimology-faqs-section .trimology-faq-collapse.show {
+  border-top: 1px solid rgba(216, 220, 239, 0.75);
+}
+
+.trimology-faqs-section .trimology-faq-body {
+  padding: 0 24px 22px !important;
+}
+
+.trimology-faqs-section .trimology-faq-text,
+.trimology-faqs-section .trimology-faq-text a {
+  color: var(--jb-text) !important;
+}
+
+.trimology-faqs-section .trimology-faq-text a {
+  text-decoration: underline;
+}
+
+.trimology-faqs-section .trimology-iconfont {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  width: 34px;
+  height: 34px;
+  padding-left: 0 !important;
+  border-radius: 999px;
+  background: rgba(245, 124, 0, 0.12);
+  color: var(--jb-accent) !important;
+}
+
+.trimology-review-card .review-card-inner,
+.advantage-item,
+.pricing-card,
+.trust-badge-item,
+.trimology-faqs-section .card,
+.trimology-item-wrap,
+.trimology-counter-container,
+.trimology-text-wrap,
+.quick-links-wrapper,
+.trimology-moneyback-guarantee-section .trimology-text-wrap,
+.trimology-proven-section .item,
+.trimology-what-is-content,
+.trimology-benefits-content,
+.trimology-ingredients-content {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(216, 220, 239, 0.9);
+  box-shadow: 0 18px 40px rgba(var(--jb-shadow), 0.08);
+}
+
+.trimology-what-is-content,
+.trimology-benefits-content,
+.trimology-ingredients-content,
+.trimology-moneyback-guarantee-section .trimology-text-wrap {
+  border-radius: 24px;
+  padding: 28px;
+}
+
+#what-is-alphacur .trimology-what-is-content {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(245, 248, 255, 0.97) 100%) !important;
+  border: 1px solid rgba(208, 215, 237, 0.95) !important;
+  box-shadow: 0 24px 54px rgba(var(--jb-shadow), 0.1) !important;
+}
+
+#what-is-alphacur .trimology-image-wrap {
+  text-align: center;
+  padding: 8px;
+}
+
+#what-is-alphacur .trimology-image-wrap img {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #1a1a1a 100%);
+  border: 1px solid rgba(216, 220, 239, 0.95);
+  box-shadow: 0 22px 42px rgba(18, 8, 82, 0.12);
+  padding: 12px;
+}
+
+#what-is-alphacur .trimology-text-wrap {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+#what-is-alphacur .trimology-text {
+  color: var(--jb-text) !important;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+#what-is-alphacur .trimology-text + .trimology-text,
+#what-is-alphacur .trimology-text + .javaburn-what-is-list,
+#what-is-alphacur .javaburn-what-is-list + .trimology-text {
+  margin-top: 16px;
+}
+
+#what-is-alphacur .javaburn-what-is-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#what-is-alphacur .javaburn-what-is-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  color: var(--jb-text) !important;
+}
+
+#what-is-alphacur .javaburn-what-is-list li:last-child {
+  margin-bottom: 0;
+}
+
+#what-is-alphacur .javaburn-what-is-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.82em;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--jb-accent) 0%, var(--jb-accent-strong) 100%);
+  box-shadow: 0 6px 12px rgba(49, 180, 134, 0.2);
+}
+
+#what-is-alphacur .javaburn-what-is-list strong,
+#what-is-alphacur .trimology-text strong {
+  color: var(--jb-heading) !important;
+}
+
+#alphacur-bonuses {
+  background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%) !important;
+}
+
+#alphacur-bonuses .trimology-what-is-content {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(244, 248, 255, 0.96) 100%) !important;
+  border: 1px solid rgba(194, 204, 234, 0.8) !important;
+  box-shadow: 0 24px 54px rgba(var(--jb-shadow), 0.1) !important;
+  overflow: hidden;
+}
+
+#alphacur-bonuses .row.align-items-center {
+  position: relative;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 26px 0;
+}
+
+#alphacur-bonuses .row.align-items-center + .row.align-items-center {
+  border-top: 1px solid rgba(216, 220, 239, 0.85);
+}
+
+#alphacur-bonuses .trimology-image-wrap {
+  padding: 8px;
+}
+
+#alphacur-bonuses .trimology-image-wrap img {
+  display: inline-block;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #1a1a1a 100%);
+  box-shadow: 0 22px 40px rgba(18, 8, 82, 0.12);
+  border: 1px solid rgba(216, 220, 239, 0.95);
+  padding: 10px;
+}
+
+#alphacur-bonuses .trimology-text-wrap {
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 250, 255, 0.98) 100%) !important;
+  border: 1px solid rgba(216, 220, 239, 0.95) !important;
+  box-shadow: 0 20px 42px rgba(var(--jb-shadow), 0.08) !important;
+  padding: 28px !important;
+}
+
+#alphacur-bonuses .trimology-text-wrap > span.trimology-fonts-style {
+  background: linear-gradient(135deg, var(--jb-accent) 0%, var(--jb-accent-strong) 100%) !important;
+  color: #ffffff !important;
+  padding: 7px 16px !important;
+  border-radius: 999px !important;
+  font-size: 12px !important;
+  letter-spacing: 0.12em !important;
+  box-shadow: 0 12px 22px rgba(245, 124, 0, 0.22);
+}
+
+#alphacur-bonuses .trimology-subheadings {
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+#alphacur-bonuses .trimology-text {
+  margin-bottom: 0;
+}
+
+#alphacur-bonuses .trimology-text + .trimology-text {
+  margin-top: 12px;
+}
+
+#alphacur-bonuses .reviews-cta-section {
+  margin-top: 26px;
+}
+
+#alphacur-bonuses .reviews-cta-content {
+  background: linear-gradient(135deg, var(--jb-primary) 0%, var(--jb-primary-strong) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 24px 54px rgba(18, 8, 82, 0.24) !important;
+}
+
+.trimology-ingredients-content .trimology-counter-container {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.trimology-benefits-content .trimology-counter-container,
+.trimology-moneyback-guarantee-section .trimology-text-wrap {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.trimology-proven-section .item,
+.trimology-item-wrap,
+.trimology-counter-container,
+.trimology-text-wrap {
+  border-radius: 20px;
+}
+
+.reviews-badge,
+.review-card-inner,
+.advantage-item,
+.trust-badge-item,
+.trimology-faqs-section .card,
+.pricing-card,
+.trimology-item-wrap,
+.trimology-counter-container,
+.trimology-text-wrap {
+  backdrop-filter: blur(10px);
+}
+
+.trimology-reviews-section {
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%) !important;
+}
+
+.trimology-pricing-section {
+  background: linear-gradient(180deg, #fff8e1 0%, #ffe0b2 30%, #1a1a1a 100%) !important;
+}
+
+.pricing-header,
+.package-header {
+  background: linear-gradient(135deg, #e65100 0%, #f57c00 100%) !important;
+}
+
+.package-header-best,
+.best-value-card .package-header {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 50%, #e65100 100%) !important;
+}
+
+.best-value-card {
+  border-color: rgba(245, 124, 0, 0.65) !important;
+  box-shadow: 0 24px 54px rgba(245, 124, 0, 0.16), 0 18px 44px rgba(var(--jb-shadow), 0.12) !important;
+}
+
+.pricing-card:hover,
+.trust-badge-item:hover,
+.advantage-item:hover,
+.trimology-review-card:hover .review-card-inner,
+.trimology-faqs-section .card:hover {
+  border-color: rgba(245, 124, 0, 0.28) !important;
+  box-shadow: 0 24px 54px rgba(var(--jb-shadow), 0.12) !important;
+}
+
+.trimology-proven-section .icon-box,
+.step-number,
+.trimology-advantage-content .trimology-counter-container ul li:before,
+.trimology-benefits-content .trimology-counter-container ul li:before,
+.trimology-ingredients-content .trimology-counter-container ol li:before {
+  background: linear-gradient(135deg, var(--jb-accent) 0%, var(--jb-accent-strong) 100%) !important;
+  border-color: var(--jb-accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(245, 124, 0, 0.22) !important;
+}
+
+.trimology-proven-section .trimology-iconfont,
+.trimology-faqs-section .trimology-iconfont,
+.customer-location svg,
+.feature-icon,
+.sticky-cta svg,
+.btn-sticky-cta svg,
+.reviews-cta-button svg,
+.btn-advantages-cta svg,
+.trimology-hero-btn-primary svg {
+  color: var(--jb-accent) !important;
+}
+
+.price-amount {
+  color: var(--jb-button) !important;
+}
+
+.best-value-card .price-amount,
+.discounted-total,
+.shipping-info,
+.bonus-info {
+  color: var(--jb-accent) !important;
+}
+
+.total-label,
+.badge-title,
+.advantage-title,
+.stat-value,
+.review-title,
+.customer-name,
+.conclusion-text,
+.sticky-cta-title,
+.trimology-description,
+.trimology-cut-price {
+  color: var(--jb-heading) !important;
+}
+
+.payment-methods,
+.footer-copyright,
+.trimology-faqs-section .card,
+.pricing-card,
+.trust-badge-item,
+.advantage-item,
+.trimology-item-wrap,
+.trimology-counter-container,
+.trimology-text-wrap {
+  border-color: rgba(216, 220, 239, 0.92) !important;
+}
+
+.trimology-faqs-section .trimology-iconfont,
+.customer-location svg,
+.reviews-badge,
+.feature-icon,
+.sticky-cta svg,
+.btn-sticky-cta svg,
+.reviews-cta-button svg,
+.btn-advantages-cta svg,
+.trimology-hero-btn-primary svg {
+  color: var(--jb-accent) !important;
+}
+
+.reviews-cta-button,
+.btn-advantages-cta,
+.btn-sticky-cta,
+.trimology-hero-btn-primary,
+.btn-warning {
+  color: #ffffff !important;
+}
+
+.reviews-cta-content,
+.reviews-cta-content .reviews-cta-title,
+.reviews-cta-content .reviews-cta-text,
+.reviews-cta-content p,
+.reviews-cta-content h3,
+.reviews-cta-content span,
+#alphacur-bonuses .reviews-cta-content,
+#alphacur-bonuses .reviews-cta-content .reviews-cta-title,
+#alphacur-bonuses .reviews-cta-content .reviews-cta-text,
+#alphacur-bonuses .reviews-cta-content p,
+#alphacur-bonuses .reviews-cta-content h3,
+#alphacur-bonuses .reviews-cta-content span {
+  color: #ffffff !important;
+}
+
+.sticky-cta-content,
+.sticky-cta-content .sticky-cta-title,
+.sticky-cta-content .sticky-cta-subtitle,
+.sticky-cta-content .sticky-cta-text,
+.sticky-cta-content h4,
+.sticky-cta-content p,
+.sticky-cta-content span,
+.sticky-cta-container .sticky-cta-title,
+.sticky-cta-container .sticky-cta-subtitle,
+.sticky-cta-container .btn-sticky-cta,
+.sticky-cta-container .btn-sticky-cta span,
+.sticky-cta-container .btn-sticky-cta svg {
+  color: #ffffff !important;
+}
+
+.trimology-hero-badge,
+.trimology-hero-badge * {
+  color: #ffffff !important;
+}
+
+.reviews-badge,
+.reviews-badge * {
+  color: #ffffff !important;
+}
+
+.trimology-hero-badge .badge-icon,
+.trimology-hero-badge .badge-icon * {
+  color: var(--jb-gold) !important;
+}
+
+.package-header .package-quantity,
+.package-header .package-supply,
+.package-header-best .package-quantity,
+.package-header-best .package-supply,
+.best-value-card .package-header .package-quantity,
+.best-value-card .package-header .package-supply {
+  color: #ffffff !important;
+}
+
+.reviews-cta-button svg,
+.btn-advantages-cta svg,
+.btn-sticky-cta svg,
+.trimology-hero-btn-primary svg {
+  color: currentColor !important;
+}
+
+.advantage-icon svg circle,
+.verified-badge svg path,
+.trimology-hero-trust-indicators .trust-item:last-child svg path,
+.trust-badge-item:nth-child(2) svg path,
+.trust-badge-item:nth-child(3) svg path {
+  fill: var(--jb-accent) !important;
+}
+
+.trust-badge-item:nth-child(1) svg path,
+.natural-badge svg path,
+.trimology-hero-trust-indicators .trust-item:first-child svg path,
+.stat-stars svg,
+.reviews-badge svg path {
+  fill: var(--jb-gold) !important;
+}
+
+.card-label,
+.stat-label,
+.badge-subtitle,
+.trimology-reviews-subtitle,
+.sticky-cta-subtitle,
+.quick-links-list li a,
+.disclaimer-text,
+.footer-copyright p,
+.trimology-special-deal-section .trimology-description {
+  color: rgba(59, 65, 99, 1) !important;
+}
+
+/* Floating badges: white text on dark card background */
+.trimology-floating-card .card-value {
+  color: #f59e0b !important;
+}
+
+.trimology-floating-card .card-label {
+  color: rgba(210, 218, 245, 0.92) !important;
+}
+
+.reviews-cta-text,
+.quick-links-list li a,
+.disclaimer-text,
+.footer-copyright p,
+.sticky-cta-subtitle,
+.trimology-special-deal-section .trimology-description {
+  color: rgba(225, 230, 250, 0.96) !important;
+}
+
+.reviews-cta-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.reviews-cta-title,
+.reviews-cta-text,
+.reviews-cta-button,
+.reviews-cta-button span {
+  color: #ffffff !important;
+}
+
+.quick-links-list li a:hover,
+.quick-links-list li a:focus,
+.footer-link,
+.footer-link:hover,
+.footer-link:focus {
+  color: #ffffff !important;
+}
+
+.quick-links-wrapper {
+  background: rgba(18, 12, 56, 0.72) !important;
+  border-radius: 28px;
+  border: 1px solid rgba(216, 220, 239, 0.12) !important;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.16);
+}
+
+#javaburn-pages {
+  position: relative;
+  padding: 64px 0 28px;
+}
+
+#javaburn-pages::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 18% 24%, rgba(245, 124, 0, 0.12) 0%, transparent 26%), radial-gradient(circle at 82% 18%, rgba(75, 70, 229, 0.12) 0%, transparent 24%);
+  pointer-events: none;
+}
+
+#javaburn-pages .trimology-container {
+  position: relative;
+  z-index: 1;
+}
+
+#javaburn-pages .quick-links-wrapper {
+  max-width: 1040px;
+  gap: 22px;
+  padding: 20px;
+  background: rgba(11, 20, 38, 0.34) !important;
+  border-radius: 30px;
+  border: 1px solid rgba(216, 220, 239, 0.08) !important;
+  box-shadow: none;
+}
+
+#javaburn-pages .quick-links-column {
+  padding: 28px 28px 24px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(216, 220, 239, 0.55);
+  box-shadow: 0 22px 48px rgba(5, 8, 25, 0.08);
+  overflow: visible !important;
+}
+
+#javaburn-pages .quick-links-title {
+  margin-bottom: 20px;
+  font-size: 1.55rem;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+#javaburn-pages .quick-links-list {
+  gap: 12px;
+}
+
+#javaburn-pages .quick-links-list li a {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(216, 220, 239, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+#javaburn-pages .quick-links-list li a::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0.82;
+}
+
+#javaburn-pages .quick-links-list li a:hover,
+#javaburn-pages .quick-links-list li a:focus {
+  transform: translateX(6px);
+  background: rgba(245, 124, 0, 0.12);
+  border-color: rgba(49, 180, 134, 0.34) !important;
+  box-shadow: 0 14px 28px rgba(5, 8, 25, 0.16);
+}
+
+@media (max-width: 992px) {
+  #javaburn-pages {
+    padding: 52px 0 24px;
+  }
+
+  #javaburn-pages .quick-links-wrapper {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  #javaburn-pages .quick-links-column {
+    padding: 22px 22px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #javaburn-pages {
+    padding: 42px 0 18px;
+  }
+
+  #javaburn-pages .quick-links-wrapper {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  #javaburn-pages .quick-links-column {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  #javaburn-pages .quick-links-title {
+    margin-bottom: 16px;
+    font-size: 1.28rem;
+  }
+
+  #javaburn-pages .quick-links-list li a {
+    padding: 12px 14px;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #javaburn-pages .quick-links-column {
+    padding: 18px 15px;
+  }
+
+  #javaburn-pages .quick-links-title {
+    font-size: 1.16rem;
+  }
+
+  #javaburn-pages .quick-links-list {
+    gap: 10px;
+  }
+
+  #javaburn-pages .quick-links-list li a {
+    padding: 11px 12px;
+    font-size: 0.94rem;
+  }
+}
+
+.trimology-footer-section {
+  border-top: 1px solid rgba(216, 220, 239, 0.12);
+}
+
+.disclaimer-text {
+  color: rgba(201, 209, 236, 0.72) !important;
+}
+
+.trimology-footer-section .footer-link,
+.trimology-footer-section .footer-link:hover,
+.trimology-footer-section .footer-link:focus {
+  color: #ffffff !important;
+}
+
+.sticky-footer-cta {
+  border-top: 1px solid rgba(216, 220, 239, 0.12);
+}
+
+.sticky-cta-container {
+  background: transparent !important;
+}
+
+.sticky-cta-content {
+  gap: 24px;
+}
+
+.shipping-info,
+.bonus-info {
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .trimology-what-is-content,
+  .trimology-benefits-content,
+  .trimology-ingredients-content,
+  .trimology-moneyback-guarantee-section .trimology-text-wrap {
+    padding: 22px;
+  }
+
+  #alphacur-bonuses .row.align-items-center {
+    padding: 22px 0;
+  }
+
+  #alphacur-bonuses .trimology-text-wrap {
+    padding: 22px !important;
+    margin-top: 14px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .trimology-what-is-content,
+  .trimology-benefits-content,
+  .trimology-ingredients-content,
+  .trimology-moneyback-guarantee-section .trimology-text-wrap {
+    padding: 18px;
+  }
+
+  #alphacur-bonuses .row.align-items-center {
+    padding: 18px 0;
+  }
+
+  #alphacur-bonuses .trimology-text-wrap {
+    padding: 18px !important;
+  }
+
+  #alphacur-bonuses .trimology-image-wrap img {
+    max-width: 240px !important;
+  }
+
+  #what-is-alphacur .trimology-image-wrap img {
+    max-width: 280px !important;
+  }
+
+  #what-is-alphacur .javaburn-what-is-list li {
+    padding-left: 22px;
+  }
+}
+
+/* ── Floating badges mobile fix ────────────────────────────── */
+@media (max-width: 768px) {
+  /* Remove absolute positioning; show all 3 in a row below image */
+  .trimology-hero-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .trimology-hero-image-container {
+    width: 100%;
+  }
+
+  .trimology-floating-badges-row {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .trimology-floating-card,
+  .trimology-floating-card-1,
+  .trimology-floating-card-2,
+  .trimology-floating-card-3 {
+    position: static !important;
+    display: flex !important;
+    animation: none !important;
+    transform: none !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 10px 14px !important;
+  }
+
+  .floating-card-content {
+    gap: 8px;
+  }
+
+  .floating-card-icon {
+    font-size: 1.3rem !important;
+  }
+
+  .trimology-floating-card .card-value {
+    font-size: 1.1rem !important;
+  }
+
+  .trimology-floating-card .card-label {
+    font-size: 0.72rem !important;
+    white-space: normal !important;
+  }
+}
+
+/* ── Proven Formula Section fix ─────────────────────────────── */
+#javaburn-proven-formula .row {
+  align-items: stretch;
+}
+
+#javaburn-proven-formula .trimology-usa-lg-4 {
+  position: relative;
+}
+
+/* ── Countdown Timer ─────────────────────────────── */
+.vf-sticky-banner {
+  position: fixed;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: #0a0a0a; /* Deep Navy */
+  border: 2px solid #31b486; /* Accent Green */
+  color: #ffffff;
+  padding: 10px 28px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  width: max-content;
+  max-width: 95%;
+}
+.vf-sticky-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 18px;
+  width: 100%;
+}
+.vf-banner-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.vf-banner-text strong {
+  font-weight: 900;
+  color: #fbbf24; /* Vibrant Gold */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.vf-sticky-banner .vf-countdown-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  font-size: 1.45rem;
+  color: #ffffff;
+  background: #ef4444; /* Bright Red */
+  padding: 4px 14px;
+  border-radius: 8px;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.45);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.vf-banner-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: #0a0a0a;
+  font-weight: 900;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 26px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.35);
+}
+.vf-banner-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.5);
+  color: #000000;
+}
+@media (max-width: 991px) {
+  .vf-sticky-banner {
+    top: auto;
+    bottom: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .vf-sticky-banner {
+    padding: 12px 16px;
+    width: 95%;
+    border-radius: 12px;
+    bottom: 16px;
+  }
+  .vf-sticky-banner-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .vf-banner-text {
+    font-size: 0.95rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+  }
+  .vf-sticky-banner .vf-countdown-time {
+    font-size: 1.35rem;
+    padding: 6px 14px;
+    white-space: nowrap;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .vf-banner-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+  }
+}
+
+.vf-countdown-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 12px 24px;
+  margin-bottom: 20px;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.vf-countdown-icon {
+  display: flex;
+  align-items: center;
+  color: var(--jb-gold);
+}
+.vf-countdown-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.vf-countdown-label {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--jb-text-dark);
+  white-space: nowrap;
+}
+.vf-countdown-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--jb-gold);
+  letter-spacing: 0.5px;
+}
+
+.trimology-proven-section .item {
+  position: relative !important;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.trimology-proven-section .item::before {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  #javaburn-proven-formula .trimology-usa-lg-4 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(3)::before,
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f57c00 0%, #e65100 100%);
+    border: 2px solid #f57c00;
+    box-shadow: 0 6px 14px rgba(245, 124, 0, 0.25);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(3)::after,
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    transform: translate(-62%, -50%) rotate(45deg);
+    z-index: 3;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 991px) {
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(3)::before,
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(4)::before,
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(3)::after,
+  #javaburn-proven-formula .trimology-usa-lg-4:nth-child(4)::after {
+    display: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SCROLL TO TOP BUTTON
+   ══════════════════════════════════════════════════════════════ */
+#vfScrollToTop {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  z-index: 9997;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--jb-button) 0%, var(--jb-accent-strong) 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(49, 180, 134, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease, background 0.3s ease;
+}
+
+#vfScrollToTop.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#vfScrollToTop:hover {
+  background: linear-gradient(135deg, var(--jb-accent-strong) 0%, #17794f 100%);
+  box-shadow: 0 12px 32px rgba(49, 180, 134, 0.45);
+  transform: translateY(-3px);
+}
+
+#vfScrollToTop svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+  #vfScrollToTop {
+    bottom: 92px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SOCIAL SHARE — FOOTER INLINE
+   ══════════════════════════════════════════════════════════════ */
+.vf-footer-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 0 6px;
+}
+
+.vf-footer-share-label {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(219, 225, 248, 0.7);
+}
+
+.vf-footer-share a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vf-footer-share a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.vf-footer-share a svg {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+}
+
+.vf-footer-share .vf-share-fb { background: #1877f2; }
+.vf-footer-share .vf-share-tw { background: #000000; }
+.vf-footer-share .vf-share-wa { background: #25d366; }
+.vf-footer-share .vf-share-em { background: #ea4335; }
+
+.footer-content {
+  padding-bottom: 70px;
+}
+
+@media (max-width: 576px) {
+  .vf-footer-share {
+    gap: 10px;
+  }
+
+  .vf-footer-share a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .vf-footer-share a svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Light section text overrides */
+.pricing-card .package-quantity,
+.pricing-card .package-supply,
+.pricing-card .price-amount,
+.pricing-card .price-label,
+.pricing-card .total-label,
+.pricing-card .discounted-total,
+.pricing-card .shipping-info,
+.pricing-card .price-original,
+.pricing-card .original-total,
+.trimology-faq-item h3,
+.trimology-faq-item p,
+.trimology-what-is-content p,
+.trimology-ingredients-section .trimology-text,
+.trimology-ingredients-section h3,
+.advantage-text,
+.advantages-intro,
+.trimology-works-section .trimology-text,
+.trimology-works-section h2,
+.trimology-works-section h3,
+.trimology-works-section h4,
+.trimology-works-section li,
+.trimology-works-section p,
+.trimology-ingredients-section .trimology-section-title,
+.trimology-ingredients-section h2,
+.trimology-ingredients-section h3,
+.trimology-ingredients-section h4,
+.trimology-ingredients-section p,
+.trimology-ingredients-section li,
+.trimology-what-is-section .trimology-section-title,
+.trimology-what-is-section h2,
+.trimology-what-is-section h3,
+.trimology-what-is-section p,
+.trimology-what-is-section li,
+.trimology-advantages-section .trimology-section-title,
+.trimology-advantages-section h2,
+.trimology-advantages-section p,
+.trimology-advantages-section li,
+.trimology-proven-section .trimology-section-title,
+.trimology-proven-section h2,
+.trimology-proven-section h3,
+.trimology-proven-section p,
+.trimology-proven-section li,
+.trimology-moneyback-guarantee-section .trimology-section-title,
+.trimology-moneyback-guarantee-section h2,
+.trimology-moneyback-guarantee-section p,
+.trimology-faqs-section .trimology-section-title,
+.trimology-faqs-section h2 {
+  color: #1a1a1a !important;
+}
+
+/* Increase section padding for more spacious feel */
+.trimology-section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.trimology-hero-section {
+  padding-top: 140px !important;
+  padding-bottom: 120px !important;
+}
+
+.trimology-reviews-section {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.trimology-pricing-section {
+  padding-top: 2rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* Footer link fixes */
+.quick-links-list li a {
+  color: #d4d4d4 !important;
+}
+.quick-links-list li a:hover {
+  color: #f57c00 !important;
+}
+
+/* Pricing header warm gradient */
+.pricing-header {
+  background: linear-gradient(135deg, #f57c00 0%, #ff9800 50%, #ffc107 100%) !important;
+}
+
+
+
+/* ===== DARK TEXT FOR LIGHT BACKGROUND CARDS ===== */
+.review-card-inner .review-title,
+.review-card-inner .review-text,
+.review-card-inner .customer-name,
+.review-card-inner .customer-location,
+.advantage-item .item-title,
+.advantage-item .trimology-text,
+.advantage-item .badge-subtitle,
+.trust-badge-item .trimology-text,
+.pricing-card .package-quantity,
+.pricing-card .package-supply,
+.pricing-card .price-amount,
+.pricing-card .price-label,
+.pricing-card .total-label,
+.pricing-card .discounted-total,
+.pricing-card .shipping-info,
+.pricing-card .price-original,
+.pricing-card .original-total,
+.trimology-faqs-section .card h3,
+.trimology-faqs-section .card .trimology-faq-text,
+.trimology-item-wrap .item-title,
+.trimology-item-wrap .trimology-text,
+.trimology-counter-container .trimology-text,
+.trimology-proven-section .item .trimology-text,
+.trimology-what-is-content .trimology-text,
+.trimology-benefits-content .trimology-text,
+.trimology-ingredients-content .trimology-text,
+.trimology-ingredients-content h3,
+.trimology-works-section .trimology-text,
+.trimology-works-section h2,
+.trimology-works-section h3,
+.trimology-works-section h4,
+.trimology-works-section li,
+.trimology-works-section p,
+.trimology-ingredients-section .trimology-section-title,
+.trimology-ingredients-section h2,
+.trimology-ingredients-section h3,
+.trimology-ingredients-section h4,
+.trimology-ingredients-section p,
+.trimology-ingredients-section li,
+.trimology-what-is-section .trimology-section-title,
+.trimology-what-is-section h2,
+.trimology-what-is-section h3,
+.trimology-what-is-section p,
+.trimology-what-is-section li,
+.trimology-advantages-section .trimology-section-title,
+.trimology-advantages-section h2,
+.trimology-advantages-section p,
+.trimology-advantages-section li,
+.trimology-proven-section .trimology-section-title,
+.trimology-proven-section h2,
+.trimology-proven-section h3,
+.trimology-proven-section p,
+.trimology-proven-section li,
+.trimology-moneyback-guarantee-section .trimology-section-title,
+.trimology-moneyback-guarantee-section h2,
+.trimology-moneyback-guarantee-section p,
+.trimology-faqs-section .trimology-section-title,
+.trimology-faqs-section h2 {
+  color: #1a1a1a !important;
+}
+
+/* Increase section padding for more spacious feel */
+.trimology-section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.trimology-hero-section {
+  padding-top: 140px !important;
+  padding-bottom: 120px !important;
+}
+
+.trimology-reviews-section {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.trimology-pricing-section {
+  padding-top: 2rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* Pricing cards should have white background */
+.pricing-card {
+  background: #ffffff !important;
+}
+
+/* Review cards should have white background */
+.review-card-inner {
+  background: #ffffff !important;
+}
+
+/* FAQ cards should have white background */
+.trimology-faqs-section .card {
+  background: #ffffff !important;
+}
+
+/* Badge/advantage items should have white background */
+.advantage-item,
+.trust-badge-item {
+  background: #ffffff !important;
+}
+
+/* Footer links fix */
+.quick-links-list li a {
+  color: #d4d4d4 !important;
+}
+.quick-links-list li a:hover {
+  color: #f57c00 !important;
+}
+
+/* Pricing header text */
+.pricing-header .pricing-main-title,
+.pricing-header .pricing-subtitle {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Package header text should be white */
+.package-header .package-quantity,
+.package-header .package-supply,
+.package-header-best .package-quantity,
+.package-header-best .package-supply {
+  color: #ffffff !important;
+}
+
+/* Sticky CTA fix */
+.sticky-cta-title,
+.sticky-cta-subtitle {
+  color: #ffffff !important;
+}
+
+/* Reviews CTA section fix */
+.reviews-cta-title,
+.reviews-cta-text {
+  color: #ffffff !important;
+}
+/* =============================================================
+   LIGHT THEME OVERRIDE - Java Burn 2.0
+   Converts dark/black theme to clean light coffee/cream theme
+   ============================================================= */
+
+/* Root variables - light palette */
+:root {
+  --jb-primary: #ffffff !important;
+  --jb-dark: #ffffff !important;
+  --jb-dark-soft: #f5efe6 !important;
+  --jb-light: #f5f5f5 !important;
+  --jb-heading: #2c1f16 !important;
+  --jb-text: #5c4a3a !important;
+  --jb-text-dark: #2c1f16 !important;
+  --jb-border: #e8dfd4 !important;
+  --jb-shadow: 160, 130, 100 !important;
+}
+
+/* Base */
+html,
+body {
+  background: #ffffff !important;
+  color: #2c1f16 !important;
+}
+
+body {
+  background: #ffffff !important;
+  color: #2c1f16 !important;
+}
+
+#main {
+  background: #ffffff !important;
+}
+
+/* Links */
+a:not(.btn):not(.trimology-hero-btn-primary):not(.reviews-cta-button):not(.btn-advantages-cta):not(.btn-sticky-cta):not(.pricing-header *):not(.package-header *):not(.quick-links-list li a):not(.vf-banner-btn):not(#vfFlashSaleButton):not(.kw-cta):not(.sticky-footer-cta a):not(.claim-yours-btn) {
+  color: #e65100 !important;
+}
+
+/* Navbar */
+.trimology-navbar,
+.trimology-navbar.opened,
+.trimology-navbar.collapsed,
+.trimology-navbar.trimology-navbar-short,
+.trimology-menu-section .trimology-navbar,
+.trimology-menu-section .dropdown-menu {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e8dfd4 !important;
+  box-shadow: 0 2px 12px rgba(90, 60, 40, 0.08) !important;
+}
+
+.trimology-navbar .nav-link {
+  color: #2c1f16 !important;
+}
+
+.trimology-navbar .nav-link:hover,
+.trimology-navbar .nav-link:focus,
+.trimology-navbar .nav-link.active {
+  color: #f57c00 !important;
+}
+
+.trimology-caption,
+.trimology-caption:hover,
+.trimology-caption:focus {
+  color: #2c1f16 !important;
+}
+
+.trimology-hamburger span {
+  background: #2c1f16 !important;
+}
+
+/* Section backgrounds - all light */
+.trimology-hero-section,
+.trimology-reviews-section,
+.trimology-special-deal-section,
+.trimology-footer-section,
+.trimology-quick-links-section,
+.trimology-benefits-section,
+.trimology-choose-title,
+.trimology-what-is-section,
+.trimology-works-section,
+.trimology-advantages-section,
+.trimology-ingredients-section,
+.trimology-proven-section,
+.trimology-moneyback-guarantee-section,
+.trimology-faqs-section,
+#alphacur-bonuses,
+#javaburn-pages,
+.reviews-cta-content,
+.trimology-hero-gradient,
+.trimology-hero-pattern,
+.trimology-deal-content-one,
+.trimology-section {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Alternate section backgrounds for visual rhythm */
+.trimology-hero-section,
+.trimology-reviews-section,
+.trimology-benefits-section,
+.trimology-special-deal-section,
+.trimology-footer-section,
+.trimology-quick-links-section,
+#alphacur-bonuses {
+  background: #ffffff !important;
+}
+
+.trimology-what-is-section,
+.trimology-advantages-section,
+.trimology-proven-section,
+.trimology-faqs-section {
+  background: #fff8f0 !important;
+}
+
+.trimology-works-section,
+.trimology-ingredients-section,
+.trimology-moneyback-guarantee-section {
+  background: #f5efe6 !important;
+}
+
+/* Text colors - dark coffee brown */
+.trimology-hero-section h1,
+.trimology-hero-section h2,
+.trimology-hero-section h3,
+.trimology-hero-section h4,
+.trimology-hero-section p,
+.trimology-hero-section li,
+.trimology-hero-section span,
+.trimology-hero-section .trimology-text,
+.trimology-hero-section .trimology-section-title,
+.trimology-hero-section .trimology-description,
+.trimology-hero-section .trimology-hero-title-main,
+.trimology-hero-section .trimology-hero-title-sub,
+.trimology-hero-section .trimology-hero-description,
+.trimology-hero-section .trimology-hero-feature-item,
+.trimology-hero-section .trimology-hero-trust-indicators {
+  color: #2c1f16 !important;
+}
+
+.trimology-reviews-section h1,
+.trimology-reviews-section h2,
+.trimology-reviews-section h3,
+.trimology-reviews-section h4,
+.trimology-reviews-section p,
+.trimology-reviews-section li,
+.trimology-reviews-section span,
+.trimology-reviews-section .trimology-text,
+.trimology-reviews-section .trimology-section-title,
+.trimology-reviews-section .review-title,
+.trimology-reviews-section .review-text,
+.trimology-reviews-section .customer-name,
+.trimology-reviews-section .customer-location,
+.trimology-reviews-section .trimology-reviews-title,
+.trimology-reviews-section .trimology-reviews-subtitle {
+  color: #2c1f16 !important;
+}
+
+.trimology-special-deal-section h1,
+.trimology-special-deal-section h2,
+.trimology-special-deal-section h3,
+.trimology-special-deal-section h4,
+.trimology-special-deal-section p,
+.trimology-special-deal-section li,
+.trimology-special-deal-section span,
+.trimology-special-deal-section .trimology-text,
+.trimology-special-deal-section .trimology-section-title,
+.trimology-special-deal-section .trimology-description {
+  color: #2c1f16 !important;
+}
+
+.trimology-benefits-section h1,
+.trimology-benefits-section h2,
+.trimology-benefits-section h3,
+.trimology-benefits-section h4,
+.trimology-benefits-section p,
+.trimology-benefits-section li,
+.trimology-benefits-section span,
+.trimology-benefits-section .trimology-text,
+.trimology-benefits-section .trimology-section-title,
+.trimology-benefits-section .advantage-text,
+.trimology-benefits-section .advantages-title,
+.trimology-benefits-section .item-title {
+  color: #2c1f16 !important;
+}
+
+#alphacur-bonuses h1,
+#alphacur-bonuses h2,
+#alphacur-bonuses h3,
+#alphacur-bonuses h4,
+#alphacur-bonuses p,
+#alphacur-bonuses li,
+#alphacur-bonuses span,
+#alphacur-bonuses .trimology-text,
+#alphacur-bonuses .trimology-section-title,
+#alphacur-bonuses .trimology-subheadings {
+  color: #2c1f16 !important;
+}
+
+.reviews-cta-content h1,
+.reviews-cta-content h2,
+.reviews-cta-content h3,
+.reviews-cta-content h4,
+.reviews-cta-content p,
+.reviews-cta-content span,
+.reviews-cta-content .reviews-cta-title,
+.reviews-cta-content .reviews-cta-text {
+  color: #2c1f16 !important;
+}
+
+.trimology-quick-links-section h1,
+.trimology-quick-links-section h2,
+.trimology-quick-links-section h3,
+.trimology-quick-links-section h4,
+.trimology-quick-links-section p,
+.trimology-quick-links-section span,
+.trimology-quick-links-section .quick-links-title,
+.trimology-quick-links-section .quick-links-list li a {
+  color: #2c1f16 !important;
+}
+
+.trimology-footer-section h1,
+.trimology-footer-section h2,
+.trimology-footer-section h3,
+.trimology-footer-section h4,
+.trimology-footer-section p,
+.trimology-footer-section li,
+.trimology-footer-section span,
+.trimology-footer-section .footer-link,
+.trimology-footer-section .footer-copyright p,
+.trimology-footer-section .disclaimer-text,
+.trimology-footer-section .vf-footer-share-label {
+  color: #5c4a3a !important;
+}
+
+/* General section text */
+.trimology-section h1,
+.trimology-section h2,
+.trimology-section h3,
+.trimology-section h4,
+.trimology-section p,
+.trimology-section li,
+.trimology-section span,
+.trimology-section .trimology-text,
+.trimology-section .trimology-section-title,
+.trimology-section .trimology-section-subtitle,
+.trimology-section .advantages-intro,
+.trimology-section .advantage-text,
+.trimology-section .review-text,
+.trimology-section .customer-name,
+.trimology-section .customer-location,
+.trimology-section .badge-subtitle,
+.trimology-section .price-label,
+.trimology-section .price-original,
+.trimology-section .original-total,
+.trimology-section .trimology-faq-text,
+.trimology-section .total-label,
+.trimology-section .badge-title,
+.trimology-section .advantage-title,
+.trimology-section .stat-value,
+.trimology-section .review-title,
+.trimology-section .conclusion-text,
+.trimology-section .trimology-description,
+.trimology-section .trimology-cut-price,
+.trimology-section .card-label,
+.trimology-section .stat-label,
+.trimology-section .sticky-cta-subtitle,
+.trimology-section .disclaimer-text {
+  color: #2c1f16 !important;
+}
+
+/* Card & content backgrounds on light theme */
+.review-card-inner,
+.advantage-item,
+.pricing-card,
+.trust-badge-item,
+.trimology-faqs-section .card,
+.trimology-item-wrap,
+.trimology-counter-container,
+.trimology-text-wrap,
+.quick-links-wrapper,
+.trimology-what-is-content,
+.trimology-benefits-content,
+.trimology-ingredients-content,
+.trimology-moneyback-guarantee-section .trimology-text-wrap,
+.trimology-proven-section .item {
+  background: #ffffff !important;
+  border-color: #e8dfd4 !important;
+  box-shadow: 0 8px 24px rgba(160, 130, 100, 0.08) !important;
+}
+
+/* Pricing header - keep orange gradient */
+.pricing-header,
+.package-header,
+.package-header-best,
+.best-value-card .package-header {
+  background: linear-gradient(135deg, #f57c00 0%, #ff9800 50%, #ffc107 100%) !important;
+}
+
+.pricing-header .pricing-main-title,
+.pricing-header .pricing-subtitle,
+.package-header .package-quantity,
+.package-header .package-supply,
+.package-header-best .package-quantity,
+.package-header-best .package-supply {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Buttons - keep orange with white text */
+.btn-warning,
+.trimology-hero-btn-primary,
+.reviews-cta-button,
+.btn-advantages-cta,
+.btn-sticky-cta {
+  background: linear-gradient(135deg, #f57c00 0%, #e65100 100%) !important;
+  border-color: #f57c00 !important;
+  color: #ffffff !important;
+}
+
+.btn-warning:hover,
+.trimology-hero-btn-primary:hover,
+.reviews-cta-button:hover,
+.btn-advantages-cta:hover,
+.btn-sticky-cta:hover {
+  background: linear-gradient(135deg, #e65100 0%, #bf360c 100%) !important;
+  color: #ffffff !important;
+}
+
+.btn-warning *,
+.trimology-hero-btn-primary *,
+.reviews-cta-button *,
+.btn-advantages-cta *,
+.btn-sticky-cta * {
+  color: #ffffff !important;
+}
+
+/* Badges - keep orange/white */
+.trimology-hero-badge,
+.reviews-badge,
+.best-value-ribbon,
+#alphacur-bonuses .trimology-text-wrap > span.trimology-fonts-style {
+  background: linear-gradient(135deg, #f57c00 0%, #e65100 100%) !important;
+  color: #ffffff !important;
+}
+
+.trimology-hero-badge *,
+.reviews-badge *,
+.best-value-ribbon * {
+  color: #ffffff !important;
+}
+
+/* Floating cards - keep dark with white text */
+.trimology-floating-card,
+.trimology-floating-card-1,
+.trimology-floating-card-2,
+.trimology-floating-card-3 {
+  background: #2c1f16 !important;
+  color: #ffffff !important;
+}
+
+.trimology-floating-card *,
+.trimology-floating-card-1 *,
+.trimology-floating-card-2 *,
+.trimology-floating-card-3 * {
+  color: #ffffff !important;
+}
+
+.trimology-floating-card .card-value {
+  color: #fbbf24 !important;
+}
+
+/* Sticky banner */
+.vf-sticky-banner {
+  background: #2c1f16 !important;
+  border-color: #f57c00 !important;
+  color: #ffffff !important;
+}
+
+.vf-sticky-banner * {
+  color: #ffffff !important;
+}
+
+.vf-sticky-banner .vf-countdown-time {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+.vf-banner-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%) !important;
+  color: #2c1f16 !important;
+}
+
+/* Footer share icons */
+.vf-footer-share a {
+  color: #ffffff !important;
+}
+
+/* Scroll to top */
+#vfScrollToTop {
+  background: linear-gradient(135deg, #f57c00 0%, #e65100 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Countdown bar */
+.vf-countdown-bar {
+  background: rgba(245, 124, 0, 0.08) !important;
+  border-color: rgba(245, 124, 0, 0.2) !important;
+}
+
+.vf-countdown-label {
+  color: #5c4a3a !important;
+}
+
+.vf-countdown-time {
+  color: #f57c00 !important;
+}
+
+/* FAQ section */
+.trimology-faqs-section .card {
+  background: #ffffff !important;
+  border-color: #e8dfd4 !important;
+}
+
+.trimology-faqs-section .trimology-faq-title-edit,
+.trimology-faqs-section h3 {
+  color: #2c1f16 !important;
+}
+
+.trimology-faqs-section .trimology-faq-text {
+  color: #5c4a3a !important;
+}
+
+.trimology-faqs-section .trimology-iconfont {
+  background: rgba(245, 124, 0, 0.12) !important;
+  color: #f57c00 !important;
+}
+
+/* Icons */
+.trimology-proven-section .icon-box,
+.step-number,
+.trimology-advantage-content .trimology-counter-container ul li:before,
+.trimology-benefits-content .trimology-counter-container ul li:before,
+.trimology-ingredients-content .trimology-counter-container ol li:before {
+  background: linear-gradient(135deg, #f57c00 0%, #e65100 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Price highlights */
+.price-amount,
+.best-value-card .price-amount,
+.discounted-total,
+.shipping-info,
+.bonus-info,
+.card-value,
+.title-highlight,
+.verified-badge,
+.quick-links-list li a:hover {
+  color: #f57c00 !important;
+}
+
+/* Trust badge icons */
+.trust-badge-item:nth-child(1) svg path,
+.natural-badge svg path,
+.trimology-hero-trust-indicators .trust-item:first-child svg path,
+.stat-stars svg,
+.reviews-badge svg path {
+  fill: #f57c00 !important;
+}
+
+.advantage-icon svg circle,
+.verified-badge svg path,
+.trust-badge-item:nth-child(2) svg path,
+.trust-badge-item:nth-child(3) svg path {
+  fill: #f57c00 !important;
+}
+
+/* Links hover */
+.quick-links-list li a:hover,
+.quick-links-list li a:focus,
+.footer-link:hover,
+.footer-link:focus {
+  color: #f57c00 !important;
+}
+
+/* Mobile menu */
+.trimology-menu-section .trimology-navbar,
+.trimology-menu-section .dropdown-menu {
+  background: #ffffff !important;
+}
+
+/* Text primary/success/info */
+.text-primary,
+.text-primary:hover,
+.text-primary:focus,
+a.text-primary,
+a.text-primary:hover,
+a.text-primary:focus,
+.text-success,
+.text-success:hover,
+.text-success:focus,
+.text-info,
+.text-info:hover,
+.text-info:focus {
+  color: #2c1f16 !important;
+}
+
+.text-warning,
+a.text-warning,
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #f57c00 !important;
+}
+
+/* Remove purple/blue tints from shadows and glows */
+.trimology-hero-gradient,
+.reviews-cta-content::before {
+  background: radial-gradient(circle, rgba(245, 124, 0, 0.08) 0, transparent 68%) !important;
+}
+
+.trimology-hero-pattern {
+  background-image: radial-gradient(circle at 20% 30%, rgba(245, 124, 0, 0.04) 0, transparent 48%), radial-gradient(circle at 80% 70%, rgba(160, 130, 100, 0.04) 0, transparent 52%) !important;
+}
+
+#javaburn-pages::before {
+  background: radial-gradient(circle at 18% 24%, rgba(245, 124, 0, 0.06) 0%, transparent 26%), radial-gradient(circle at 82% 18%, rgba(160, 130, 100, 0.05) 0%, transparent 24%) !important;
+}
+
+/* Sticky footer CTA */
+.sticky-footer-cta,
+.sticky-cta-content {
+  background: #ffffff !important;
+  border-top: 1px solid #e8dfd4 !important;
+}
+
+.sticky-cta-title,
+.sticky-cta-subtitle {
+  color: #2c1f16 !important;
+}
+/* Light theme additional fixes */
+
+/* Hero title gradient text -> solid dark */
+.trimology-hero-title-main {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #2c1f16 !important;
+  background-clip: initial !important;
+  color: #2c1f16 !important;
+}
+
+.trimology-hero-title-sub {
+  color: #5c4a3a !important;
+}
+
+/* Navbar - override purple gradient with higher specificity */
+.trimology-menu-section .trimology-navbar,
+.trimology-menu-section .trimology-navbar.opened,
+.trimology-menu-section .trimology-navbar.collapsed,
+.trimology-menu-section .trimology-navbar.trimology-navbar-short,
+.trimology-menu-section .trimology-navbar.trimology-navbar-expand-lg,
+nav.trimology-navbar.trimology-navbar-fixed-top,
+nav.trimology-navbar.trimology-navbar-dropdown {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-bottom: 1px solid #e8dfd4 !important;
+  box-shadow: 0 2px 12px rgba(90, 60, 40, 0.08) !important;
+}
+
+/* Ensure navbar links are dark */
+.trimology-menu-section .trimology-navbar .nav-link,
+nav.trimology-navbar .nav-link {
+  color: #2c1f16 !important;
+}
+
+.trimology-menu-section .trimology-navbar .nav-link:hover,
+.trimology-menu-section .trimology-navbar .nav-link:focus,
+.trimology-menu-section .trimology-navbar .nav-link.active,
+nav.trimology-navbar .nav-link:hover,
+nav.trimology-navbar .nav-link:focus,
+nav.trimology-navbar .nav-link.active {
+  color: #f57c00 !important;
+}
+
+/* Fix navbar brand layout for longer "Java Burn 2.0" text */
+.trimology-navbar .trimology-container {
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}
+
+.trimology-navbar-brand,
+.trimology-menu-section .trimology-navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  flex: 0 0 auto !important;
+  margin-right: 16px !important;
+}
+
+.trimology-navbar-brand .trimology-caption-wrap,
+.trimology-navbar-brand span,
+.trimology-menu-section .trimology-navbar-brand span,
+.trimology-navbar-dropdown .trimology-navbar-brand span {
+  display: inline-flex !important;
+  align-items: center !important;
+  vertical-align: middle !important;
+}
+
+/* Override .trimology-show2 huge font-size inside navbar brand */
+.trimology-menu-section .trimology-navbar-brand .trimology-caption,
+.trimology-navbar-dropdown .trimology-navbar-brand .trimology-caption,
+nav.trimology-navbar.trimology-navbar-dropdown .trimology-navbar-brand .trimology-caption,
+.trimology-navbar-brand .trimology-caption.trimology-show2 {
+  font-size: 1.6rem !important;
+  line-height: 1.2 !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 991px) {
+  .trimology-menu-section .trimology-navbar-brand .trimology-caption,
+  .trimology-navbar-dropdown .trimology-navbar-brand .trimology-caption,
+  nav.trimology-navbar.trimology-navbar-dropdown .trimology-navbar-brand .trimology-caption,
+  .trimology-navbar-brand .trimology-caption.trimology-show2 {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .trimology-menu-section .trimology-navbar-brand .trimology-caption,
+  .trimology-navbar-dropdown .trimology-navbar-brand .trimology-caption,
+  nav.trimology-navbar.trimology-navbar-dropdown .trimology-navbar-brand .trimology-caption,
+  .trimology-navbar-brand .trimology-caption.trimology-show2 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Countdown banner - make lighter */
+.vf-sticky-banner {
+  background: #ffffff !important;
+  border: 2px solid #f57c00 !important;
+  color: #2c1f16 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.vf-sticky-banner .vf-banner-text,
+.vf-sticky-banner .vf-banner-text strong,
+.vf-sticky-banner .vf-countdown-time {
+  color: #2c1f16 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.vf-sticky-banner .vf-countdown-time {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+.vf-banner-btn {
+  background: linear-gradient(135deg, #f57c00 0%, #e65100 100%) !important;
+  color: #ffffff !important;
+}
+/* Light theme fix for quick links / pages section */
+
+#javaburn-pages,
+#javaburn-pages::before,
+#javaburn-pages .trimology-container,
+#javaburn-pages .quick-links-wrapper,
+#javaburn-pages .quick-links-column,
+#javaburn-pages .quick-links-column:first-child,
+#javaburn-pages .quick-links-column:last-child,
+#javaburn-pages .quick-links-column:first-child::after,
+#javaburn-pages .quick-links-column:last-child::after {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+#javaburn-pages .quick-links-title,
+#javaburn-pages .quick-links-list li a,
+#javaburn-pages .quick-links-list li a::after {
+  color: #2c1f16 !important;
+}
+
+#javaburn-pages .quick-links-list li a {
+  background: #f5efe6 !important;
+  border-color: #e8dfd4 !important;
+}
+
+#javaburn-pages .quick-links-list li a:hover,
+#javaburn-pages .quick-links-list li a:focus {
+  background: rgba(245, 124, 0, 0.1) !important;
+  border-color: #f57c00 !important;
+  color: #f57c00 !important;
+}
+
+/* Ensure footer links visible */
+.trimology-footer-section .footer-link,
+.trimology-footer-section .footer-copyright p,
+.trimology-footer-section .disclaimer-text {
+  color: #5c4a3a !important;
+}
+
+.trimology-footer-section .footer-link:hover,
+.trimology-footer-section .footer-link:focus {
+  color: #f57c00 !important;
+}
+/* Fix specific visibility issues */
+
+/* Pricing section - remove dark gradient at bottom */
+.trimology-pricing-section {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* What Is Java Burn 2.0 heading - force dark color with high specificity */
+.trimology-container.trimology-what-is-section > .row > .title .trimology-section-title,
+#what-is-javaburn .trimology-section-title,
+#what-is-javaburn h2.trimology-section-title,
+.trimology-what-is-section .trimology-section-title,
+.trimology-what-is-section h2,
+.trimology-what-is-section h2.trimology-section-title {
+  color: #2c1f16 !important;
+}
+
+/* Claim Discount button - ensure white text */
+.vf-banner-btn,
+.vf-sticky-banner .vf-banner-btn,
+.trimology-hero-section .vf-banner-btn,
+.vf-sticky-banner a.vf-banner-btn {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+/* Also fix any CTA button in countdown banner */
+.vf-sticky-banner a,
+.vf-sticky-banner .vf-banner-btn span {
+  color: #ffffff !important;
+}
+
+/* Trust badges section background ensure light */
+.trimology-pricing-section .trust-badges-section,
+.trimology-pricing-section .trust-badge-item,
+.trust-badges-section .trust-badge-item {
+  background: #ffffff !important;
+}
+
+.trust-badge-item .badge-title {
+  color: #2c1f16 !important;
+}
+
+.trust-badge-item .badge-subtitle {
+  color: #5c4a3a !important;
+}
+/* Fix Claim Discount button and countdown banner */
+
+/* Higher specificity to override the global link color */
+.vf-sticky-banner .vf-banner-btn,
+.vf-sticky-banner .vf-banner-btn:hover,
+.vf-sticky-banner .vf-banner-btn:focus,
+.vf-sticky-banner .vf-banner-btn span {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  text-shadow: none !important;
+}
+
+/* Countdown banner background - solid white for visibility */
+.vf-sticky-banner {
+  background: #ffffff !important;
+  border: 2px solid #f57c00 !important;
+  box-shadow: 0 8px 28px rgba(245, 124, 0, 0.2) !important;
+}
+
+.vf-sticky-banner .vf-banner-text,
+.vf-sticky-banner .vf-banner-text strong {
+  color: #2c1f16 !important;
+}
+
+.vf-sticky-banner .vf-countdown-time {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+/* Fix pricing header blue strip */
+
+.pricing-header::before {
+  background: transparent !important;
+}
+
+.pricing-header::after {
+  background: transparent !important;
+}
+
+.pricing-header,
+.package-header,
+.package-header-best {
+  background: linear-gradient(135deg, #f57c00 0%, #ff9800 50%, #ffc107 100%) !important;
+}
+
+.pricing-header h2,
+.pricing-header p,
+.pricing-header span {
+  color: #ffffff !important;
+}
+
+/* Account for fixed navbar + sticky banner when scrolling to anchors */
+[id] {
+  scroll-margin-top: 180px !important;
+}
+
+@media (max-width: 768px) {
+  [id] {
+    scroll-margin-top: 110px !important;
+  }
+}
+
+/* Fix Jost font rendering "rn" as "m" in footer copyright and buttons */
+.copyright-text {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+
+.trimology-hero-btn-primary,
+.kw-cta,
+.sticky-footer-cta a,
+.vf-banner-btn,
+.vf-popup-cta,
+.claim-yours-btn {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Make footer disclaimer text more readable */
+.disclaimer-text,
+.disclaimer-text strong {
+  color: #444444 !important;
+}
+
+/* Compact homepage quick-links section */
+#javaburn-pages {
+  padding: 24px 0 !important;
+}
+
+#javaburn-pages .quick-links-wrapper {
+  gap: 16px !important;
+  padding: 16px !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+#javaburn-pages .quick-links-column {
+  padding: 18px 18px 14px !important;
+  border-radius: 18px !important;
+}
+
+#javaburn-pages .quick-links-title {
+  margin-bottom: 12px !important;
+  font-size: 1.2rem !important;
+}
+
+#javaburn-pages .quick-links-list {
+  gap: 8px !important;
+}
+
+#javaburn-pages .quick-links-list li a {
+  padding: 10px 12px !important;
+  font-size: 0.92rem !important;
+  border-radius: 10px !important;
+}
+
+@media (max-width: 1100px) {
+  #javaburn-pages .quick-links-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #javaburn-pages .quick-links-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Enlarge special-offer pricing image */
+#javaburn-special-offer .trimology-usa-lg-8 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+#javaburn-special-offer .trimology-image-wrap {
+  text-align: center;
+}
+
+#javaburn-special-offer .trimology-image-wrap img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  #javaburn-special-offer .trimology-image-wrap img {
+    max-width: 100%;
+  }
+}

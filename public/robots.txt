@@ -1,0 +1,77 @@
+﻿# ===========================
+# Robots.txt — Java Burn 2.0
+# ===========================
+
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /order/
+
+# ---------------------------
+# AI Crawlers — Full Access (order/ excluded)
+# ---------------------------
+User-agent: GPTBot
+Allow: /
+Disallow: /order/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /order/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /order/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /order/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /order/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /order/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /order/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /order/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /order/
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /order/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /order/
+
+User-agent: YouBot
+Allow: /
+Disallow: /order/
+
+User-agent: CCBot
+Allow: /
+Disallow: /order/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /order/
+
+User-agent: GoogleOther
+Allow: /
+Disallow: /order/
+
+# ---------------------------
+# Sitemap & LLMs
+# ---------------------------
+Sitemap: https://javaburn2.us/sitemap.xml
+# LLMs.txt: https://javaburn2.us/llms.txt

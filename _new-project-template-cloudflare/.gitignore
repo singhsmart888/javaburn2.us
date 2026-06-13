@@ -1,0 +1,38 @@
+# Python virtual environment
+.venv/
+.venv-1/
+
+# Python scripts (local tools only)
+submit-url.py
+create_og_image.py
+_audit.py
+verify_meta.py
+verify_meta.ps1
+tmp_*.py
+tmp_*.ps1
+tmp_*.sh
+
+# Setup scripts (local only — contain CF credentials)
+cf-pages-setup.ps1
+deploy.ps1
+
+# Copilot instructions (contains CF credentials - NEVER push to GitHub)
+.github/copilot-instructions.md
+
+# Template folder (if present inside project)
+_new-project-template/
+_new-project-template-cloudflare/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+
+# Template readme (delete after setup)
+README.txt
+
+# Temp files
+*.tmp
+*.bak

@@ -1,0 +1,19 @@
+# Cloudflare Pages -- Redirect Rules
+# CF Pages NATIVELY handles clean URLs:
+#   /page.html  -->  automatically accessible at  /page
+#   (and /page.html -> 308 redirect to /page)
+#
+# WARNING: DO NOT add explicit rewrite rules like:
+#       /page  /page.html  200
+#     They cause INFINITE redirect loops with CF Pages built-in 308.
+#     Wildcard rule "/* /:splat.html 200" is also DANGEROUS -- it intercepts
+#     real .html requests and serves the wrong file (often index.html).
+#
+# Only add rules here for:
+#   - 301 permanent redirects (old URL -> new URL)
+#   - External redirects (/buy -> https://affiliate.com/...)
+#   - SPA fallback (/* /index.html 200) -- only for true SPAs
+#
+# Example (safe -- actual redirects, not rewrites):
+#   /old-page  /new-page  301
+#   /go        https://example.com/affiliate  302

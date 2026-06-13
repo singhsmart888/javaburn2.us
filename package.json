@@ -1,0 +1,20 @@
+{
+  "name": "javaburn2-us-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "postbuild": "node -e \"import('fs').then(fs=>{const d='dist';if(fs.existsSync(d+'/sitemap-0.xml'))fs.copyFileSync(d+'/sitemap-0.xml',d+'/sitemap.xml');});\"",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.6",
+    "typescript": "^6.0.3"
+  }
+}

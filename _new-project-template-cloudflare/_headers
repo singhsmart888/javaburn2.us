@@ -1,0 +1,29 @@
+# Cloudflare Pages — Security & Cache Headers
+# Ye file .htaccess ki jagah headers set karti hai
+
+# === STATIC ASSETS (CSS, JS, Images) — 1 saal cache ===
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/pdf/*
+  Cache-Control: public, max-age=2592000
+
+# === HTML PAGES — short cache (fresh content) ===
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# === SECURITY HEADERS — sab pages pe ===
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

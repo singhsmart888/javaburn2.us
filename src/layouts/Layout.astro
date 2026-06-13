@@ -1,0 +1,198 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogImage?: string;
+  extraSchemas?: any[];
+  noindex?: boolean;
+  showStickyFooter?: boolean;
+}
+
+const {
+  title,
+  description,
+  keywords,
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogType = 'website',
+  ogImage = '/assets/images/6-bottles.webp',
+  extraSchemas = [],
+  noindex = false,
+  showStickyFooter = false,
+} = Astro.props;
+
+const siteUrl = 'https://javaburn2.us';
+const pageCanonical = canonical || new URL(Astro.url.pathname, siteUrl).href;
+const pageTitle = ogTitle || title;
+const pageDesc = ogDescription || description;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Java Burn 2.0',
+  url: siteUrl,
+  logo: `${siteUrl}/assets/images/logo.png`,
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Java Burn 2.0',
+  url: siteUrl,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteUrl}/?s={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title set:html={title}></title>
+  <meta name="description" content={description}>
+  {keywords && <meta name="keywords" content={keywords}>}
+  <link rel="canonical" href={pageCanonical}>
+  {noindex && <meta name="robots" content="noindex, nofollow">}
+  {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">}
+  <meta name="author" content="Java Burn 2.0">
+  <meta name="geo.region" content="US">
+  <meta name="geo.placename" content="United States">
+  <meta name="geo.position" content="37.09024;-95.712891">
+  <meta name="ICBM" content="37.09024, -95.712891">
+  <meta name="language" content="English">
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="7 days">
+  <meta http-equiv="content-language" content="en-us">
+
+  <meta property="og:title" content={pageTitle}>
+  <meta property="og:description" content={pageDesc}>
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={pageCanonical}>
+  <meta property="og:image" content={new URL(ogImage, siteUrl).href}>
+  <meta property="og:site_name" content="Java Burn 2.0">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={pageTitle}>
+  <meta name="twitter:description" content={pageDesc}>
+  <meta name="twitter:image" content={new URL(ogImage, siteUrl).href}>
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/alphacur.min.css">
+  <link rel="stylesheet" href="/alphacur-main.min.css">
+  <link rel="stylesheet" href="/javaburn-theme.css">
+  <link rel="stylesheet" href="/kw-theme.css">
+
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+  {extraSchemas.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+  ))}
+
+  <slot name="head" />
+</head>
+<body>
+  <section class="menu trimology-menu-section" id="trimology-menu">
+    <nav class="trimology-navbar trimology-navbar-dropdown trimology-navbar-fixed-top trimology-navbar-expand-lg">
+      <div class="trimology-container">
+        <div class="trimology-navbar-brand">
+          <span class="trimology-caption-wrap"><a class="trimology-caption text-success trimology-show2" href="/">Java Burn 2.0</a></span>
+        </div>
+        <button class="trimology-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#trimology-navbarSupportedContent" aria-controls="trimology-navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="trimology-hamburger"><span></span><span></span><span></span><span></span></div>
+        </button>
+        <div class="collapse trimology-navbar-collapse" id="trimology-navbarSupportedContent">
+          <ul class="trimology-navbar-nav nav-dropdown" data-app-modern-menu="true">
+            <li class="nav-item"><a class="nav-link link text-info text-primary trimology-show4" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link link text-info text-primary trimology-show4" href="/benefits">Benefits</a></li>
+            <li class="nav-item"><a class="nav-link link text-info text-primary trimology-show4" href="/ingredients">Ingredients</a></li>
+            <li class="nav-item"><a class="nav-link link text-info text-primary trimology-show4" href="/reviews">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link link text-info text-primary trimology-show4" href="/about-us">About</a></li>
+            <li class="nav-item"><a class="nav-link link text-info text-primary trimology-show4" href="/contact-us">Contact</a></li>
+          </ul>
+          <div class="trimology-navbar-buttons trimology-section-btn">
+            <a class="btn btn-warning trimology-show4" href="/order">
+              <span class="trimology-iconfont trimology-iconfont-btn"></span>Order Now <span class="arrow">&#8250;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <slot name="header-bar" />
+
+  <slot />
+
+  <slot name="post-main" />
+
+  <footer class="trimology-footer-section" id="javaburn-footer">
+    <div class="trimology-container">
+      <div class="footer-content">
+        <div class="footer-disclaimer">
+          <p class="disclaimer-text"><strong>Disclaimer:</strong> The information presented on this website is provided solely for educational and informational purposes and is not intended as a substitute for qualified medical advice. We urge you to consult with a licensed healthcare professional before altering your diet, supplementation habits, or health routine. If you have pre-existing medical conditions or health concerns, please seek your physician&rsquo;s guidance before taking this or any other dietary supplement.</p>
+          <p class="disclaimer-text">The claims and statements on this website have not been evaluated by the Food and Drug Administration. Our products are not intended to diagnose, treat, cure, or prevent any disease or medical condition. If you are expecting, nursing, taking prescription drugs, or living with a chronic illness, obtain medical counsel before using our products.</p>
+          <p class="disclaimer-text">All material and products featured on this site represent the views of the authors and are supplied on an &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo; basis. We recommend performing your own due diligence and verifying health-related claims with reputable sources. Always seek advice from a certified healthcare practitioner before adopting any wellness protocols, guidelines, or suggestions presented on this website or bundled with the products offered here.</p>
+          <p class="disclaimer-text">BuyGoods serves as the authorized retailer for this product. BuyGoods is a registered trademark of BuyGoods, a Delaware corporation headquartered at 1201 N Orange Street Suite #7223, Wilmington, DE, 19801, USA, and is used with permission. The involvement of any retailer does not imply endorsement, approval, or evaluation of this product.</p>
+          <p class="disclaimer-text">User testimonials, reviews, and personal accounts featured on this website reflect individual experiences and should not be construed as a promise of identical outcomes. Results may differ depending on personal health factors, daily habits, and regularity of use.</p>
+        </div>
+        <div class="vf-footer-share">
+          <span class="vf-footer-share-label">Share:</span>
+          <a href="#" class="vf-share-fb" aria-label="Share on Facebook" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="vf-share-tw" aria-label="Share on X" title="Share on X (Twitter)" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" class="vf-share-wa" aria-label="Share on WhatsApp" title="Share on WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.016-.823.258-.105.458-.157.657-.157.199 0 .448.099.696.298.248.199 1.016.992 1.29 1.338.273.347.547.297.942.149.395-.149 1.556-.733 1.82-.864.264-.131.446-.198.512-.313.066-.116.066-.298-.017-.497s-.546-1.345-.744-1.837c-.198-.492-.397-.413-.744-.413-.347 0-.744.074-1.157.124-.413.05-.744.298-.992.546-.248.248-1.29 1.268-1.29 1.268s-.017-.149-.05-.397c-.033-.248-.149-.645-.248-.943-.1-.298-1.057-2.517-1.39-3.222-.333-.706-.681-.612-.942-.612-.262 0-.546.025-.83.025-.282 0-.744.108-.993.422-.248.314-.942.918-.942.918s-.546-.546-.811-.844c-.264-.298-.595-.422-.942-.422s-.744.05-1.122.05c-.377 0-.761.31-1.057.71-.297.397-1.122 1.488-1.122 1.488s-.657-1.075-.844-1.37c-.186-.298-.413-.497-.744-.497s-.563.05-.844.05c-.282 0-.595.149-.844.422-.248.273-.894 1.006-.894 1.006s-.447-.795-.657-1.157c-.21-.363-.497-.546-.844-.546s-.612.05-.893.05c-.282 0-.595.124-.844.372-.248.248-.844.918-.844.918s-.563-.843-.777-1.173c-.215-.331-.497-.497-.844-.497s-.579.05-.844.05c-.264 0-.579.149-.827.422-.248.273-.761.843-.761.843s-.481-.744-.657-1.024c-.177-.281-.43-.447-.744-.447s-.546.05-.794.05c-.248 0-.529.124-.744.347-.215.223-.695.744-.695.744s-.414-.646-.563-.893c-.149-.248-.372-.397-.646-.397s-.464.05-.695.05c-.231 0-.48.124-.646.298-.166.174-.612.62-.612.62s-.347-.546-.464-.744c-.116-.198-.298-.298-.546-.298s-.413.05-.595.05c-.182 0-.38.1-.53.248-.149.149-.53.546-.53.546s-.282-.447-.38-.612c-.099-.166-.248-.248-.447-.248s-.331.05-.497.05c-.166 0-.331.075-.447.199-.116.124-.43.464-.43.464s-.215-.348-.282-.48c-.066-.133-.182-.199-.348-.199s-.249.05-.38.05c-.133 0-.249.05-.332.149-.083.099-.249.331-.249.331s-.149-.249-.199-.348c-.05-.099-.133-.149-.249-.149s-.166.05-.249.05c-.083 0-.166.025-.216.099-.05.075-.149.249-.149.249v.05c.05.05.1.1.166.149.232.166.481.332.73.481.646.397 1.324.761 2.004 1.091 1.357.662 2.764 1.224 4.188 1.67 2.846.89 5.79 1.422 8.75 1.571 2.96.149 5.937-.149 8.815-.893 2.878-.744 5.624-1.918 8.122-3.471 2.498-1.554 4.749-3.471 6.65-5.671 1.901-2.202 3.454-4.735 4.59-7.47 1.138-2.734 1.822-5.656 2.02-8.611.1-1.478-.025-2.96-.373-4.389z"/></svg></a>
+        </div>
+        <div class="footer-links" style="text-align:center;margin-top:20px;">
+          <a href="/">Home</a> |
+          <a href="/about-us">About Us</a> |
+          <a href="/contact-us">Contact Us</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/terms-conditions">Terms &amp; Conditions</a> |
+          <a href="/refund-policy">Refund Policy</a> |
+          <a href="/order-tracking">Order Tracking</a>
+        </div>
+        <p class="copyright-text">&copy; {new Date().getFullYear()} Java Burn 2.0. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  {showStickyFooter && (
+    <div class="sticky-footer-cta">
+      <a href="/order" class="btn btn-warning btn-lg">Order Java Burn 2.0 Now &rarr;</a>
+    </div>
+  )}
+
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">&#8679;</button>
+
+  <script is:inline src="/alphacur.min.js"></script>
+  <script is:inline>
+    (function() {
+      var btn = document.getElementById('scrollTopBtn');
+      if (!btn) return;
+      window.addEventListener('scroll', function() {
+        btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+      });
+      btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>

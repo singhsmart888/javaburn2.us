@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const title = "Java Burn 2.0 Order";
+const description = "Redirecting to the official Java Burn 2.0 order page.";
+const affiliateLink = "https://ef3f3cnk7l52xvf7gsf58gurcd.hop.clickbank.net/?&traffic_source=javaburn2-us";
+---
+<Layout title={title} description={description} noindex={true} showStickyFooter={false}>
+  <div class="order-bridge" style="text-align:center;padding:80px 20px;max-width:720px;margin:0 auto;">
+    <h1>Redirecting to Official Java Burn 2.0 Order Page...</h1>
+    <p>Please wait while we take you to the secure checkout.</p>
+
+    <div style="margin:40px 0;">
+      <a href={affiliateLink} rel="nofollow noopener" target="_blank" class="btn btn-warning btn-lg" style="display:inline-block;padding:18px 36px;font-size:18px;font-weight:700;border-radius:50px;text-decoration:none;">
+        Continue to Secure Checkout &rarr;
+      </a>
+    </div>
+
+    <p style="font-size:14px;color:#666;">
+      If you are not redirected automatically,
+      <a href={affiliateLink} rel="nofollow noopener" target="_blank">click here to continue</a>.
+    </p>
+  </div>
+
+  <script is:inline>
+    window.location.replace("https://ef3f3cnk7l52xvf7gsf58gurcd.hop.clickbank.net/?&traffic_source=javaburn2-us");
+  </script>
+</Layout>
