@@ -3,7 +3,7 @@
 ## Project Identity
 - **Product:** Java Burn 2.0
 - **Domain:** https://javaburn2.us
-- **Official Website:** https://morningcoffeeritual.net/
+- **Official Website:** https://javaburn2.us/order
 - **Stack:** AstroJS (static site generation)
 - **Deployment:** Cloudflare Pages
 - **Build Output:** `dist/`
